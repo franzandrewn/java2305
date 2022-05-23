@@ -6,26 +6,26 @@ public class Main {
         Весь текст до звездочки+черты не выполняются
          */
         // Вывод на экран, аббревиатура sout
-//        System.out.println("Hello java2305");
-//        System.out.println("123");
-//        System.out.println(1 + 3);
+        System.out.println("Hello java2305");
+        System.out.println("123");
+        System.out.println(1 + 3);
 
         // Арифметические операции с целыми числами
-//        System.out.println(7 + 3);
-//        System.out.println(7 - 3);
-//        System.out.println(7 * 3);
-//        System.out.println(7 / 3); // целочисленное деление
-//        System.out.println(7 % 3); // взятие остатка от деления
+        System.out.println(7 + 3);
+        System.out.println(7 - 3);
+        System.out.println(7 * 3);
+        System.out.println(7 / 3); // целочисленное деление
+        System.out.println(7 % 3); // взятие остатка от деления
 
         // Арифметические операции с дробными числами
-//        System.out.println(7.0 + 3.0);
-//        System.out.println(7.0 - 3.0);
-//        System.out.println(7.0 * 3.0);
-//        System.out.println(7.0 / 3.0); // полное деление
-//        System.out.println(7.0 % 3.0); // взятие остатка от деления
+        System.out.println(7.0 + 3.0);
+        System.out.println(7.0 - 3.0);
+        System.out.println(7.0 * 3.0);
+        System.out.println(7.0 / 3.0); // полное деление
+        System.out.println(7.0 % 3.0); // взятие остатка от деления
 
         // Операция склеивания строк
-//        System.out.println("Hello " + "java2305");
+        System.out.println("Hello " + "java2305");
 
         // task1
         /*
@@ -33,8 +33,8 @@ public class Main {
         Вывести на экран сколько у человека будет через год
         Формула для рассчета: сумма_после = сумма_до * (1 + проценты/100)
          */
-//        System.out.println(120000 * (1 + 17.0 / 100));
-//        System.out.println(120000 * (1 + 17 / 100)); // 17 / 100 = 0, поэтому ответ неверный
+        System.out.println(120000 * (1 + 17.0 / 100));
+        System.out.println(120000 * (1 + 17 / 100)); // 17 / 100 = 0, поэтому ответ неверный
 
         // Переменная - именованное значение
         // Создание переменной
@@ -42,8 +42,8 @@ public class Main {
         int number;
         // Инициализация переменной
         number = 4;
-//        System.out.println(number);
-//        System.out.println(number + 100);
+        System.out.println(number);
+        System.out.println(number + 100);
 
         // Создание и инициализация в одну строку
         int number2 = 4;
@@ -55,14 +55,14 @@ public class Main {
 
         // Расчёт суммы после года и создание переменной с этим значением
         double sumAfterYear = sum * (1 + percent / 100);
-//        System.out.println(sumAfterYear);
+        System.out.println(sumAfterYear);
 
         // Имена переменных - начинаются на букву (обычно на маленькую),
         // после первого символа можно использовать цифры и нижнее подчеркивание
         // Для сложных имен действует camelCase - все пишется слитно, слова выделяются большими буквами
         // Если есть аббревиатура, обычно её пишут как другие слова (не жесткое правило, можно нарушать)
         int ageOfMsu;
-//        System.out.println("Возраст МГУ = 200+ лет");
+        System.out.println("Возраст МГУ = 200+ лет");
 
 
         // Ctrl + Alt + L - приведение к "правильному" формату
@@ -92,58 +92,58 @@ public class Main {
 
         // Дробные числа подчиняются IEEE 754
         // Дробные числа хранятся с определенной точностью, поэтому операции над ними тоже имеют точность
-//        System.out.println(0.2 + 0.3);
-//        System.out.println(0.5 + 0.25);
+        System.out.println(0.2 + 0.3);
+        System.out.println(0.5 + 0.25);
 
         // Символьный тип
-//        char, 4 байта
+        // char, 4 байта
         char c = 'b';
-//        System.out.println(c);
-//        System.out.println((int) c);
-//        System.out.println((char) 33);
-//        System.out.println(c + 1);
+        System.out.println(c);
+        System.out.println((int) c);
+        System.out.println((char) 33);
+        System.out.println(c + 1);
 //
-//        System.out.println('Ц');
-//        System.out.println((int) 'Ц');
+        System.out.println('Ц');
+        System.out.println((int) 'Ц');
 //
-//        System.out.println('语');
-//        System.out.println((int) '语');
+        System.out.println('语');
+        System.out.println((int) '语');
 
         // Логический тип данных
         // Два значения - true и false
         boolean bool = false;
-//        System.out.println(bool);
+        System.out.println(bool);
 
         // Сравнения
-//        System.out.println(5 > 3); // больше
-//        System.out.println(5 < 3); // меньше
-//        System.out.println(5 >= 5); // больше-равно
-//        System.out.println(5 <= 5); // меньше-равно
+        System.out.println(5 > 3); // больше
+        System.out.println(5 < 3); // меньше
+        System.out.println(5 >= 5); // больше-равно
+        System.out.println(5 <= 5); // меньше-равно
 //
-//        System.out.println(5 == 5); // равно
-//        System.out.println(5 != 4); // не равно
+        System.out.println(5 == 5); // равно
+        System.out.println(5 != 4); // не равно
 
         // Ссылочный тип данных
         // Строковый тип
         String str = "Это строка - текстовый тип";
-//        System.out.println(str);
-//        System.out.println(str.length());
+        System.out.println(str);
+        System.out.println(str.length());
 //
-//        System.out.println(str.toUpperCase());
-//        System.out.println(str.toLowerCase());
+        System.out.println(str.toUpperCase());
+        System.out.println(str.toLowerCase());
 //
-//        System.out.println(str.indexOf('с')); // порядковый номер (индекс) начинается с 0
-//        System.out.println(str.indexOf('Э'));
+        System.out.println(str.indexOf('с')); // порядковый номер (индекс) начинается с 0
+        System.out.println(str.indexOf('Э'));
 //
-//        System.out.println(str.lastIndexOf('с'));
-//        System.out.println(str.indexOf('s'));
+        System.out.println(str.lastIndexOf('с'));
+        System.out.println(str.indexOf('s'));
 //
-//        System.out.println(str.indexOf("строка"));
+        System.out.println(str.indexOf("строка"));
 //
-//        System.out.println(str.charAt(0));
-//        System.out.println(str.charAt(4));
+        System.out.println(str.charAt(0));
+        System.out.println(str.charAt(4));
         str = "";
-//        System.out.println(str.isEmpty());
+        System.out.println(str.isEmpty());
 
         // Ветвление
         // Оператор if (условный оператор)
