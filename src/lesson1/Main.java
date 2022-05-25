@@ -1,3 +1,5 @@
+package lesson1;
+
 public class Main {
     // psvm - аббревиатура для создания точки входа
     public static void main(String[] args) {
