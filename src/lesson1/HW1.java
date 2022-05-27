@@ -18,6 +18,20 @@ true (потому что 2 * 3 равно 6)
  */
 public class HW1 {
     public static void main(String[] args) {
+        short x = 4;
+        int y = 16;
+        long z = 10_000_000_000L;
 
+        System.out.println(x + y + z);
+        System.out.println(x * y * z);
+        System.out.println(x * y == z);
+
+
+        long sum = x + y + z;
+        long prod = x * y * z;
+        boolean eq = x * y == z;
+        System.out.println(sum);
+        System.out.println(prod);
+        System.out.println(eq);
     }
 }
