@@ -1,5 +1,8 @@
 package lesson2;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 /*
 Спросить у пользователя целое положительное число
 Создать целочисленный массив такой же длины
@@ -10,6 +13,15 @@ package lesson2;
  */
 public class HW4 {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введите количество элементов");
+        int n = sc.nextInt();
+        int[] ints = new int[n];
 
+        for (int i = 0; i < ints.length; i++) {
+            ints[i] = i * 11;
+        }
+
+        System.out.println(Arrays.toString(ints));
     }
 }

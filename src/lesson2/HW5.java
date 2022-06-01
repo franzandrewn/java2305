@@ -1,5 +1,8 @@
 package lesson2;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 /*
 Спросить у пользователя целое положительное число m
 Создать целочисленный массив длины m
@@ -11,6 +14,20 @@ package lesson2;
  */
 public class HW5 {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введите количество элементов");
+        int m = sc.nextInt();
+        int[] ints = new int[m];
 
+        int sum = 0;
+        for (int i = 0; i < ints.length; i++) {
+            System.out.println("Введите элемент по индексу " + i);
+            int input = sc.nextInt();
+            ints[i] = input;
+            sum += input;
+        }
+
+        System.out.println(Arrays.toString(ints));
+        System.out.println("Сумма элементов = " + sum);
     }
 }
