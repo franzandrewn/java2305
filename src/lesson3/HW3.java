@@ -9,7 +9,17 @@ package lesson3;
 В psvm проверить работу метода на примерах или любых других строках
  */
 public class HW3 {
-    public static void main(String[] args) {
+    static boolean oneOrLessSubst(String original, String target) {
+        int indexOfFirstTarget = original.indexOf(target);
+        int indexOfLastTarget = original.lastIndexOf(target);
+        System.out.println("В первый раз встретили '"+ target + "' на " + indexOfFirstTarget);
+        System.out.println("В последний раз встретили '" + target + "' на " + indexOfLastTarget);
 
+        return indexOfFirstTarget == indexOfLastTarget;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(oneOrLessSubst("asdasdasd", "asd"));
+        System.out.println(oneOrLessSubst("привет, это Java программа", " это Java "));
     }
 }

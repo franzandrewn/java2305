@@ -6,7 +6,14 @@ package lesson3;
 Например, если в psvm вызвать repeatString("asd",2), то в консоли должно быть "asdasd"
  */
 public class HW2 {
-    public static void main(String[] args) {
+    static void repeatString(String s, int num) {
+        for (int i = 0; i < num; i++) {
+            System.out.print(s);
+        }
+    }
 
+    public static void main(String[] args) {
+        repeatString("asd", 2);
+        repeatString("qwe", 0);
     }
 }

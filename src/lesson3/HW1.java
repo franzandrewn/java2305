@@ -7,7 +7,12 @@ package lesson3;
 Должно вывести 0.7142857142857143
  */
 public class HW1 {
-    public static void main(String[] args) {
+    static double div(double x, double y) {
+        return x / y;
+    }
 
+    public static void main(String[] args) {
+        System.out.println(div(5.0, 7.0));
+        System.out.println(div(5.0, 0.0));
     }
 }
