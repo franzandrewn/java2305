@@ -14,4 +14,8 @@ public class FinalExample {
         this.number = number;
 //        pi = -1.2;
     }
+
+    final public void finalMethod() {
+        System.out.println("FinalExample.finalmethod()");
+    }
 }

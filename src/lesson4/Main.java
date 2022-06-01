@@ -1,5 +1,7 @@
 package lesson4;
 
+import lesson5.Balance;
+
 import java.util.Arrays;
 
 public class Main {
@@ -174,6 +176,17 @@ public class Main {
     Добавить новый метод saySomething(), который выводит в консоль "name не дурак"
      */
 
+
+    static void encapsulationExample() {
+        BankBalance bb = new BankBalance();
+        bb.printInfo();
+        Balance b = new Balance();
+//        b.clientId = 2; // clientId имеет private модификатор доступа, поэтому нигде кроме Balance упомянут быть не может
+//        b.date = "2022-06-01"; // protected доступен только внутри пакета или в наследниках
+//        b.balance = 10000; // default доступен только внутри пакета
+        b.description = "Новый счет"; // public доступен везде
+    }
+
     public static void main(String[] args) {
         // Максимум и минимум в массиве
 //        arrayAlgorithms();
@@ -191,6 +204,8 @@ public class Main {
 
 //        staticKeyword();
 
-        extendsKeyword();
+//        extendsKeyword();
+
+        encapsulationExample();
     }
 }
