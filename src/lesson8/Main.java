@@ -226,13 +226,13 @@ public class Main {
 
     static void treeTraversal() {
         // Бинарные деревья - деревья, узлы которого могут иметь максимум 2 наследников
-        BNode bNodeA = new BNode("A");
-        BNode bNodeB = new BNode("B");
-        BNode bNodeC = new BNode("C");
-        BNode bNodeD = new BNode("D");
-        BNode bNodeE = new BNode("E");
-        BNode bNodeF = new BNode("F");
-        BNode bNodeG = new BNode("G");
+        BNode<String> bNodeA = new BNode<>("A");
+        BNode<String> bNodeB = new BNode<>("B");
+        BNode<String> bNodeC = new BNode<>("C");
+        BNode<String> bNodeD = new BNode<>("D");
+        BNode<String> bNodeE = new BNode<>("E");
+        BNode<String> bNodeF = new BNode<>("F");
+        BNode<String> bNodeG = new BNode<>("G");
         bNodeA.left = bNodeB;
         bNodeA.right = bNodeC;
         bNodeB.left = bNodeD;
@@ -254,11 +254,11 @@ public class Main {
         postorder(bNodeA);
     }
 
-    static void horizontal(BNode root) {
-        LinkedList<BNode> queue = new LinkedList<>();
+    static void horizontal(BNode<?> root) {
+        LinkedList<BNode<?>> queue = new LinkedList<>();
         queue.addLast(root);
         while (!queue.isEmpty()) {
-            BNode temp = queue.removeFirst();
+            BNode<?> temp = queue.removeFirst();
             System.out.println(temp);
             if (temp.left != null) {
                 queue.addLast(temp.left);
@@ -270,7 +270,7 @@ public class Main {
         }
     }
 
-    static void preorder(BNode root) {
+    static void preorder(BNode<?> root) {
         if (root != null) {
             System.out.println(root);
             preorder(root.left);
@@ -278,7 +278,7 @@ public class Main {
         }
     }
 
-    static void inorder(BNode root) {
+    static void inorder(BNode<?> root) {
         if (root != null) {
             inorder(root.left);
             System.out.println(root);
@@ -286,7 +286,7 @@ public class Main {
         }
     }
 
-    static void postorder(BNode root) {
+    static void postorder(BNode<?> root) {
         if (root != null) {
             postorder(root.left);
             postorder(root.right);
@@ -304,7 +304,7 @@ public class Main {
         list.add(6);
         list.add(-5);
         list.add(7);
-        list.add(100);
+        list.add(10);
         list.add(8);
         list.add(5);
         System.out.println(list);
@@ -315,9 +315,15 @@ public class Main {
         list.sort(Comparator.comparingInt(x -> x));
         System.out.println(list);
 
-//        System.out.println(binarySearch(list, -5));
+        System.out.println("Binary search");
+        System.out.println(binarySearch(list, -5));
         System.out.println(binarySearch(list, 7));
         System.out.println(binarySearch(list, 101));
+
+        System.out.println("Interpolation search");
+        System.out.println(interpolationSearch(list, -5));
+        System.out.println(interpolationSearch(list, 7));
+        System.out.println(interpolationSearch(list, 101));
     }
 
     static int linearSearch(List<Integer> list, int target) {
@@ -335,7 +341,7 @@ public class Main {
 
         while (left <= right) {
             int mid = (left + right) / 2;
-//            System.out.printf("left %d, right %d, mid %d, list[%d] %d\n", left, right, mid, mid, list.get(mid));
+            System.out.printf("left %d, right %d, mid %d, list[%d] %d\n", left, right, mid, mid, list.get(mid));
             if (list.get(mid) > target) {
                 right = mid - 1;
             } else if (list.get(mid) < target) {
@@ -348,6 +354,20 @@ public class Main {
     }
 
     static int interpolationSearch(List<Integer> list, int target) {
+        int left = 0;
+        int right = list.size() - 1;
+
+        while (left <= right && target >= list.get(left) && target <= list.get(right)) {
+            int guess = left + ((target - list.get(left))*(right - left)/(list.get(right) - list.get(left)));
+            System.out.printf("left %d, right %d, guess %d, list[%d] %d\n", left, right, guess, guess, list.get(guess));
+            if (list.get(guess) > target) {
+                right = guess - 1;
+            } else if (list.get(guess) < target) {
+                left = guess + 1;
+            } else {
+                return guess;
+            }
+        }
         return -1;
     }
 
@@ -409,6 +429,30 @@ public class Main {
         return i+1;
     }
 
+    static void bstExample() {
+        LinkedList<Integer> list = new LinkedList<>();
+        list.add(4);
+        list.add(1);
+        list.add(6);
+        list.add(-1);
+        list.add(10);
+        list.add(11);
+        list.add(8);
+        list.add(4);
+        list.add(5);
+
+        BinarySearchTree bst = new BinarySearchTree();
+        for (Integer i : list) {
+            bst.add(i);
+        }
+
+        System.out.println(bst.containsValue(0));
+        System.out.println(bst.containsValue(10));
+        System.out.println(bst.containsValue(11));
+
+        inorder(bst.getRoot());
+    }
+
     public static void main(String[] args) {
 //        sets();
 //        maps();
@@ -419,6 +463,7 @@ public class Main {
 //        trees();
 //        treeTraversal();
 //        search();
-        sort();
+//        sort();
+        bstExample();
     }
 }

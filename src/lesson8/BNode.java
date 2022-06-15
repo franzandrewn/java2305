@@ -1,12 +1,12 @@
 package lesson8;
 
-public class BNode {
-    String value;
+public class BNode<T> {
+    T value;
 
-    BNode left;
-    BNode right;
+    BNode<T> left;
+    BNode<T> right;
 
-    public BNode(String value) {
+    public BNode(T value) {
         this.value = value;
     }
 

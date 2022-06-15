@@ -5,7 +5,7 @@ import java.util.Objects;
 
 // Интерфейс Serializable - метка о том, что объекты Person Java
 // умеет превращать в набор байт
-public class Person implements Serializable {
+public class Person implements Serializable, Comparable<Person> {
 
     String name;
     transient String password;
@@ -59,5 +59,10 @@ public class Person implements Serializable {
 
     String turnIntoString() {
         return name + " " + age;
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        return this.age - o.age;
     }
 }
