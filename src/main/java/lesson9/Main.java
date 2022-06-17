@@ -149,10 +149,23 @@ public class Main {
 
     }
 
+    static void objectExample() {
+        Address a1 = new Address("a", "b", "c", "d");
+        Address a2 = new Address("a", "b", "c", "d");
+
+        System.out.println(a1 == a2);
+        System.out.println(a1.equals(a2));
+
+        System.out.println(a1.hashCode());
+        System.out.println(a2.hashCode());
+
+    }
+
     public static void main(String[] args) {
 //        singletonExample();
 //        decoratorExample();
 //        iteratorExample();
-        gson();
+//        gson();
+        objectExample();
     }
 }
