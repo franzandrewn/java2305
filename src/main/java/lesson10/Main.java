@@ -27,10 +27,9 @@ public class Main {
             // Взятие всех строк
             rs = statement.executeQuery("SELECT name, age FROM persons;");
             // Взятие строк с сортировкой по имени (убывание) и возрасту (возрастание)
-//            rs = statement.executeQuery("SELECT name, age FROM persons ORDER BY name DESC, age ASC;");
+            rs = statement.executeQuery("SELECT name, age FROM persons ORDER BY name DESC, age ASC;");
             // Взятие строк с фильтрацие по возрасту<24 и имени, начинающегося с V
-//            rs = statement.executeQuery("SELECT name, age FROM persons WHERE age<24 AND name LIKE 'V%';");
-
+            rs = statement.executeQuery("SELECT name, age FROM persons WHERE age<24 AND name LIKE 'V%';");
             while (rs.next()) {
                 System.out.printf("Person with name %s, age %d\n",
                         rs.getString("name"),
@@ -59,17 +58,17 @@ public class Main {
                     "FOREIGN KEY(author) REFERENCES authors(authorid)" +
                     ");");
 
-//            statement.executeUpdate("INSERT INTO authors(name, age) VALUES ('A', 55);");
-//            statement.executeUpdate("INSERT INTO authors(name, age) VALUES ('B', 43);");
+            statement.executeUpdate("INSERT INTO authors(name, age) VALUES ('A', 55);");
+            statement.executeUpdate("INSERT INTO authors(name, age) VALUES ('B', 43);");
 
             ResultSet rs;
             rs = statement.executeQuery("SELECT authorid, name, age FROM authors;");
-//            while (rs.next()) {
-//                System.out.printf("Author #%d with name %s, age %d\n",
-//                        rs.getInt("authorid"),
-//                        rs.getString("name"),
-//                        rs.getInt("age"));
-//            }
+            while (rs.next()) {
+                System.out.printf("Author #%d with name %s, age %d\n",
+                        rs.getInt("authorid"),
+                        rs.getString("name"),
+                        rs.getInt("age"));
+            }
 
 //            statement.executeUpdate("INSERT INTO books(name, author) VALUES ('BookA', 1);");
 //            statement.executeUpdate("INSERT INTO books(name, author) VALUES ('BookB', 1);");
